@@ -87,6 +87,14 @@ namespace db
             return false;
         }
 
+        void call_in_operation_context(
+            const std::function<void(wsrep::operation_context&)>& fn)
+            const override
+        {
+            wsrep::null_operation_context op;
+            fn(op);
+        }
+
         void debug_sync(const char*) override { }
         void debug_crash(const char*) override { }
     private:
