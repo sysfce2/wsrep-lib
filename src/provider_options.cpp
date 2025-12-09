@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 Codership Oy <info@codership.com>
+ * Copyright (C) 2021,2025 Codership Oy <info@codership.com>
  *
  * This file is part of wsrep-lib.
  *
@@ -26,6 +26,7 @@
 #include <cassert>
 #include <cctype>
 #include <cstring>
+#include <cstdint> // int64_t'
 
 /**
  * Provider options string separators.
